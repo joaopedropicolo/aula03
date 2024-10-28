@@ -5,7 +5,7 @@
     flex-wrap: wrap;
     width: 50%;
     text-align: center;
-    border: 4px solid blue;
+    border: 3px outset blue;
 }
 
 .blocoPrincipal{

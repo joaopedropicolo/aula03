@@ -1,0 +1,19 @@
+.blocoLista{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 50%;
+    text-align: center;
+    border: 4px solid blue;
+}
+
+.blocoPrincipal{
+    width: 50%;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5%;
+    margin: 1rem;
+}

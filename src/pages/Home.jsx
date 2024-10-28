@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import ListaProdutos from "../components/ListaProdutos";
+
 
 export default function Home(){
 
@@ -17,20 +19,9 @@ const [Lista,setLista] = useState([]);
         receberListaProduto()
     }, []);
 
-
 return (
     <>
     <h1>Lista de Produtos</h1>
-    <ul>
-        {Lista.map(produto => (
-            <li key={produto.id}>
-                <h2>{produto.title}</h2>
-                <p>{produto.description}</p>
-                <p>Preço: R${produto.price}</p>
-            </li>
-        ))}
-    </ul>
+    <ListaProdutos Lista={Lista}/>
     </>
 )}
-
-

@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
 import ListaProdutos from "../components/ListaProdutos";
 
-
 export default function Home(){
-
-const [Lista,setLista] = useState([]);
+const [Lista, setLista] = useState([]);
 
     useEffect(() => {
         const receberListaProduto = async () => {
@@ -13,7 +11,7 @@ const [Lista,setLista] = useState([]);
                 const dados = await resposta.json();
                 setLista(dados)
             } catch (erro) {
-                alert("ERROR")
+                console.error("Erro na API! Produtos não serão exibidos.")
             }
         }
         receberListaProduto()

@@ -11,7 +11,8 @@ const [Lista, setLista] = useState([]);
                 const dados = await resposta.json();
                 setLista(dados)
             } catch (erro) {
-                console.error("Erro na API! Produtos não serão exibidos.")
+                console.error("Erro na API! Produtos não serão exibidos.");
+                alert('Erro na API!')
             }
         }
         receberListaProduto()

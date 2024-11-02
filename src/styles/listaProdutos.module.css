@@ -1,19 +1,42 @@
-.blocoLista{
+.blocoPrincipal {
     display: flex;
-    justify-content: center;
+    width: 100%;
+    min-height: 170vh;
     flex-direction: row;
-    flex-wrap: wrap;
-    width: 50%;
-    text-align: center;
-    border: 3px outset blue;
+    justify-content: space-between;
 }
-
-.blocoPrincipal{
-    width: 50%;
+  
+.blocoProdutos {
     height: 50vh;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 5%;
     margin: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+  
+.blocoProduto {
+    transition: transform 0.3s ease;
+}
+  
+.blocoProduto:hover {
+    transform: scale(1.065);
+    border: 2px solid #00ff4c;
+}
+  
+.produtoContainer {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    width: 400px;
+    text-align: center;
+}
+  
+.produtoContainer img {
+    border-radius: 4px;
+    margin-top: 0.5rem;
 }

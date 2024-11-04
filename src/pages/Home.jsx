@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import ListadeProdutos from "../components/Listadeprodutos";
+import Loading from "../components/loading";
 
 export default function App() {
     const [lista, setLista] = useState([]);
@@ -18,9 +19,14 @@ export default function App() {
         receberListaProdutos();
     }, []);
 
+    if (lista.length === 0) { 
+        return <Loading />; 
+    }
+
     return (
-        <>
+        <div>
+            <h2 className="Home">Listagem de Produtos</h2>
             <ListadeProdutos lista={lista} />
-        </>
+        </div>
     );
 }

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import FiltrosLista from "../components/FiltrosLista";
 import ListaProdutos from "../components/ListaProdutos";
 
 export default function Home(){
@@ -18,16 +19,6 @@ const [Lista, setLista] = useState([]);
         receberListaProduto()
     }, []);
 
-const ordeAz = () =>{
-    const listAux = [...Lista].sort((a, b) => a.title.localeCompare(b.title));
-    setLista(listAux);
-}
-
-const ordeZa = () => {
-    const listAux = [...Lista].sort((a, b) => b.title.localeCompare(a.title));
-    setLista(listAux);
-};
-
     if (Lista.length === 0){
         return <h1>Carregando...</h1>
     }
@@ -35,8 +26,7 @@ const ordeZa = () => {
 return (
     <>
     <h1>Lista de Produtos</h1>
-    <button onClick={() => ordeAz()}>A-Z</button>
-    <button onClick={() => ordeZa()}>Z-A</button>
+    <FiltrosLista Lista={Lista}/>
     <ListaProdutos Lista={Lista}/>
     </>
 )}
